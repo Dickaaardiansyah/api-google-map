@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Store</title>
+</head>
+<body>
+    <header class="navbar">
+      <div class="logo">Pesona alam</div>
+      <button class="login-btn" id="openLoginDialog">Masuk</button>
+    </header>
+  
+    <main class="hero">
+      <div class="hero-left">
+        <img src="<%= require('./assets/hawimau.png') %>" alt="Reading illustration" class="hero-img" />
+      </div>
+      <div class="hero-right">
+        <h1>Pesona alam</h1>
+        <p>Nikmati Keindahan Alam, Bersyukur Terhadap Anugerah Tuhan.</p>
+        <button class="cta-btn" id="openRegisterDialog">Daftar</button>
+      </div>
+    </main>
+  
+    <dialog id="loginDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+
+      <form id="loginForm" class="form" aria-hidden="false">
+        <h2 id="dialogTitle">Login</h2>
+        <input type="email" placeholder="Email" aria-label="Email" required />
+        <input type="password" placeholder="Password" aria-label="Password" required />
+        <button type="submit">Login</button>
+        <button type="button" id="closeDialog">Tutup</button>
+        <a href="#" class="switch-link" id="switchToRegister">Belum punya akun? Daftar</a>
+      </form>
+  
+      <form id="registerForm" class="form" hidden aria-hidden="true">
+        <h2>Register</h2>
+        <input type="text" placeholder="Username" aria-label="Username" required />
+        <input type="email" placeholder="Email" aria-label="Email" required />
+        <input type="password" placeholder="Password" aria-label="Password" required />
+        <button type="submit">Daftar</button>
+        <button type="button" id="closeDialog2">Tutup</button>
+        <a href="#" class="switch-link" id="switchToLogin">Sudah punya akun? Login</a>
+      </form>
+    </dialog>
+</body>
+</html>
